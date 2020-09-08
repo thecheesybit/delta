@@ -13,7 +13,7 @@ class FirstScreen extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Hexcolor('#E80505'),Hexcolor('#FDD819') ],
+            colors: [Hexcolor('#00e5ff'),Hexcolor('#1200ff') ],
           ),
         ),
         child: Center(
@@ -82,7 +82,7 @@ class FirstScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 250),
+              SizedBox(height: 50),
               FlatButton(
                 onPressed: () {
                   Navigator.push(

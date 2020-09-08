@@ -31,7 +31,7 @@ class QrScreen extends StatelessWidget {
                               MaterialPageRoute(builder: (context) => ScanScreen()),
                             );
                           },
-                          child: const Text('SCAN QR CODE')
+                          child: const Text('Scan timetable QR')
                       ),
                     ),
                    Padding(
@@ -46,7 +46,7 @@ class QrScreen extends StatelessWidget {
                               MaterialPageRoute(builder: (context) => GenerateScreen()),
                             );
                           },
-                          child: const Text('GENERATE QR CODE')
+                          child: const Text('Show timetable QR')
                       ),
                     ),
                 ],

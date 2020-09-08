@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'dart:io';
 
 
+// ignore: must_be_immutable
 class DetailWidget extends StatefulWidget  {
 
   String _filePath;

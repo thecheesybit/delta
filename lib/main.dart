@@ -1,4 +1,3 @@
-
 import 'package:delta/screens/firstScreen.dart';
 import 'package:delta/screens/googleLogin.dart';
 import 'package:flutter/material.dart';
@@ -7,12 +6,13 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:delta/screens/SignIn.dart';
 
 final List<String> imgList = [
-  'assets/images/logo14.png',
-  'assets/images/logo7.png',
-  'assets/images/logo13.png',
-  'assets/images/logo10.png',
-  'assets/images/logo12.png',
-  'assets/images/logo11.png',
+  'assets/images/vit.png'
+  // 'assets/images/logo14.png',
+  // 'assets/images/logo7.png',
+  // 'assets/images/logo13.png',
+  // 'assets/images/logo10.png',
+  // 'assets/images/logo12.png',
+  // 'assets/images/logo11.png',
 ];
 
 int mode;
@@ -45,18 +45,18 @@ class _HomePageState extends State<HomePage> {
         child: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-              colors: [Hexcolor('#FDD819'), Hexcolor('#E80505')],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Hexcolor('#00E5FF'), Hexcolor('#1200FF')],
             ),
           ),
           child: Column(
             children: <Widget>[
               Center(
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(0.0, 120.0, 0.0, 40.0),
+                  padding: const EdgeInsets.fromLTRB(0.0, 80.0, 0.0, 40.0),
                   child: CarouselSlider(
-                    options: CarouselOptions(autoPlay: true),
+                    options: CarouselOptions(autoPlay: false),
                     items: imgList
                         .map(
                           (item) => Container(
@@ -70,34 +70,46 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Text(
-                'DELTA',
+                'VTOP TIME TABLE',
                 style: TextStyle(
-                  fontFamily: 'Notable',
-                  fontSize: 50.0,
+                  fontFamily: 'IndieFlower',
+                  fontSize: 35.0,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               SizedBox(
-                width: 100.0,
-                height: 10.0,
+                width: 150.0,
+                height: 0.0,
+                child: Divider(
+                  color: Colors.white,
+                ),
+              ),SizedBox(
+                width: 150.0,
+                height: 0.0,
+                child: Divider(
+                  color: Colors.white,
+                ),
+              ),SizedBox(
+                width: 150.0,
+                height: 0.0,
                 child: Divider(
                   color: Colors.white,
                 ),
               ),
               SizedBox(
-                height: 250,
+                height: 80,
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(110, 0, 110, 0),
+                padding: const EdgeInsets.fromLTRB(70, 0, 70, 0),
                 child: RaisedButton(
-                 color: Colors.white,
+                  color: Colors.white,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(40),
-                      //side: BorderSide(color: Colors.white, width: 1)),
+                    borderRadius: BorderRadius.circular(40),
+                    //side: BorderSide(color: Colors.white, width: 1)),
                   ),
                   elevation: 4,
-                  padding: EdgeInsets.fromLTRB(16, 12, 16, 12),
+                  padding: EdgeInsets.fromLTRB(16, 10, 16, 10),
                   onPressed: () {
                     mode = 0;
                     Navigator.push(
@@ -106,29 +118,30 @@ class _HomePageState extends State<HomePage> {
                     );
                   },
                   child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Image(image: AssetImage("assets/images/phone_logo.png"),
-                          height: 35.0),
-                       Padding(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: Text(
-                        "Sign In with Phone",
-                        style: TextStyle(
-                          fontFamily: 'IndieFlower',
-                          fontSize: 20.0,
-                          color: Colors.black,
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Image(
+                            image: AssetImage("assets/images/phone_logo.png"),
+                            height: 35.0),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(5.5,0,5.5,0),
+                          child: Text(
+                            "Sign In with Phone",
+                            style: TextStyle(
+                              fontFamily: 'IndieFlower',
+                              fontSize: 20.0,
+                              color: Colors.black,
+                            ),
+                          ),
                         ),
-                      ),
-                    ),]
-                  ),
+                      ]),
                 ),
               ),
               SizedBox(
                 height: 10,
               ),
-            RaisedButton(
+              RaisedButton(
                 splashColor: Colors.grey,
                 onPressed: () {
                   mode = 1;
@@ -136,7 +149,7 @@ class _HomePageState extends State<HomePage> {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) {
-                          return FirstScreen();  
+                          return FirstScreen();
                         },
                       ),
                     );
